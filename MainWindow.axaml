@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaIssue16451.MainWindow"
+        Title="AvaloniaIssue16451">
+  <StackPanel>
+	  <Button Content="Click Me" Click="Button_Click" HorizontalAlignment="Center" />
+	  <!--<Button Content="Click Me 3" Click="Button_Click" HorizontalAlignment="Center" />-->
+
+	  <Button Content="Click Me 2" HorizontalAlignment="Center" >
+      <Button.Flyout>
+        <Flyout>
+	        <Button Content="Click Me 3" Click="Button_Click" />
+          <!--<TextBlock Text="Hello from Flyout!" Padding="10"/>-->
+        </Flyout>
+      </Button.Flyout>   
+    </Button>
+
+  </StackPanel>
+</Window>
